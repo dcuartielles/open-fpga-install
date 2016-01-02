@@ -23,7 +23,10 @@ Please contribute translating the \*.po files to as many languages as possible.
 I accept pull-requests in exchange for good old school open source credit :-)
 
 # credit
-Besides all of the good work made by the open-fpga community, there is Louis Iacona to thank for his great example on how to make a multiligual installation script.
+Besides all of the good work made by the open-fpga community, there are the following people to thank for their specific direct contribution to this project:
+
+* Louis Iacona: for his great example on how to make a multiligual installation script, or multilingual anything CLI for that matter
+* J. Gonzalez (a.k.a. Obijuan) that besides making the tutorials for ICEStick, submitted the first pull request to this project on the installation order of the different packages
 
 # license
 (Copyleft) D. Cuartielles, 2016, GPLv3
