@@ -72,24 +72,6 @@ fi
 # create a temporary installation folder
 mkdir install.tmp
 
-# Install Arachne-pnr
-printf "\n#######################################################################\n\n"
-i18n_display "Install arachnepnr"
-printf "\n#######################################################################\n\n"
-install=$(i18n_prompt "Confirm installation")
-if [[ $install == I* ]]; then
-  i18n_display "Confirmed action"
-  cd install.tmp
-  git clone https://github.com/cseed/arachne-pnr.git arachne-pnr
-  cd arachne-pnr
-  make -j$(nproc)
-  sudo make install
-  cd ..
-  cd ..
-else
-  i18n_display "Skipped action"
-fi
-
 # Install Icestorm
 printf "\n#######################################################################\n\n"
 i18n_display "Install icestorm"
@@ -100,6 +82,24 @@ if [[ $install == I* ]]; then
   cd install.tmp
   git clone https://github.com/cliffordwolf/icestorm.git icestorm
   cd icestorm
+  make -j$(nproc)
+  sudo make install
+  cd ..
+  cd ..
+else
+  i18n_display "Skipped action"
+fi
+
+# Install Arachne-pnr
+printf "\n#######################################################################\n\n"
+i18n_display "Install arachnepnr"
+printf "\n#######################################################################\n\n"
+install=$(i18n_prompt "Confirm installation")
+if [[ $install == I* ]]; then
+  i18n_display "Confirmed action"
+  cd install.tmp
+  git clone https://github.com/cseed/arachne-pnr.git arachne-pnr
+  cd arachne-pnr
   make -j$(nproc)
   sudo make install
   cd ..
